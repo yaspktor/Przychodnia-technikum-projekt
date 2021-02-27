@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PL-pl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +7,13 @@
     <title>Przychodnia</title>
 </head>
 <body>
-    <p>OPA!!!</p>
-
-    <p>test2</p>
-test
+    <form action="./scripts/register.php" method="POST">
+        <label for="name">Podaj imię: </label><input type="text" name="name" id="name"><br>
+        <label for="surname">Podaj nazwisko: </label><input type="text" name="surname" id="surname"><br>
+        <label for="nick">Podaj nick: </label><input type="text" name="nick" id="nick"><br>
+        <label for="email">Podaj e-mail: </label><input type="email" name="email" id="email"><br>
+        <label for="password">Podaj hasło: </label><input type="password" name="password" id="password"><br>
+        <input type="submit" value="Zatwierdź">
+    </form>
 </body>
 </html>
