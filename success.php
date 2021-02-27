@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <a href="register.php">Zarejestruj się już teraz!</a>
+    <h1>Konto zostało zarejestrowane!</h1>
 
     
 </body>
