@@ -18,13 +18,6 @@
     <a href="./index.php">Wyloguj się</a><br>
     <a href="./user.php">Wróć do strony pacjenta!</a>
 
-    <form action="morning.php" method="POST">
-        <input type="submit" value="Przed 14:00">
-    </form>
-    <form action="evening.php" method="POST">
-        <input type="submit" value="Po 14:20">
-    </form>
-
     <?php
 
         function toTwo($value) {

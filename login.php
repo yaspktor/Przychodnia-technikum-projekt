@@ -15,6 +15,9 @@
         $connect = mysqli_connect($host, $user, $password, $database);
     ?>
 
+    <a href="./index.php">Strona startowa</a><br>
+    <a href="./register.php">Rejestracja</a>
+
     <form action="./login.php" method="POST">
         <label for="login">Podaj login: </label><input type="text" name="login" id="login" required><br>
         <label for="password">Podaj hasło: </label><input type="password" name="password" id="password" required><br>
@@ -41,11 +44,14 @@
         }
 
         if (isset($_POST['login']) && isset($_POST['password'])) {
+            global $login;
             $login = $_POST['login'];
             $password = $_POST['password'];
             
             if (correctLogin($connect, $login)) {
                 if (correctPassword($connect, $login, $password)) {
+                    session_start();
+                    $_SESSION['login'] = $login;
                     mysqli_close($connect);
                     header("Location: http://localhost:8080/PyrzchodniaPAI/AAPrzychodnia/user.php");
                 }

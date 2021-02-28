@@ -7,7 +7,6 @@
     <title>Rejestracja</title>
 </head>
 <body>
-
     <?php #połączenie z bazą danych
         $host = 'localhost';
         $user = 'root';
@@ -15,6 +14,10 @@
         $database = 'przychodnia';
         $connect = mysqli_connect($host, $user, $password, $database);
     ?>
+
+    <a href="./index.php">Strona startowa</a><br>
+    <a href="./login.php">Logowanie</a>
+   
 
     <form action="./register.php" method="POST">
         <label for="login">Podaj login: </label><input type="text" name="login" id="login" required><br>
