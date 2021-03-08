@@ -7,7 +7,7 @@
     <title>Zapisz się!</title>
 </head>
 <body>
-    <?php #połączenie z bazą danych
+    <?php #połączenie z bazą danych testtest
         $host = 'localhost';
         $user = 'root';
         $password = '';
