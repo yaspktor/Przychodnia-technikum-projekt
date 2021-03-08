@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl-PL">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +7,12 @@
     <title>Przychodnia</title>
 </head>
 <body>
-    <p>OPA!!!</p>
 
-    <p>test2</p>
-test
+    <h1>Witaj w E-przychodni</h1>
+    <a href="login.php">Zaloguj się!!! ŁUUUU</a>
+    <a href="register.php">Nie masz konta? Zarejestruj się już teraz!</a>
+
+
+    
 </body>
 </html>
