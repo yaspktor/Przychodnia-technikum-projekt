@@ -9,9 +9,9 @@
 </head>
 <body>
 
-    <h1>Witaj w E-przychodni</h1>
-    <a href="login.php">Zaloguj się!!! ŁUUUU</a>
-    <a href="register.php">Nie masz konta? Zarejestruj się już teraz!</a>
+    <h1>Witaj w E-przychodni</h1><br>
+    <a href="login.php">Zaloguj się!!! ŁUUUU</a><br>
+    <a href="register.php">Nie masz konta? Zarejestruj się już teraz!</a><br>
 
 
     

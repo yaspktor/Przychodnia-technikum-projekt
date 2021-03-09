@@ -16,9 +16,8 @@
         $database = 'przychodnia';
         $connect = mysqli_connect($host, $user, $password, $database);
     ?>
-    <div id="container">
-    <a href="./index.php">Wyloguj się</a><br>
-    <a href="./user.php">Wróć do strony pacjenta!</a>
+    <div id="container" style="text-align: center;">
+    
 
     <form action="morning.php" method="POST">
         <input type="submit" value="Przed 14:00">
@@ -26,7 +25,7 @@
     <form action="evening.php" method="POST">
         <input type="submit" value="Po 14:20">
     </form>
-    </div>
+    
     <?php
 
         function toTwo($value) {
@@ -50,5 +49,9 @@
         } 
         echo '</select>';
     ?>
+    <br>
+    <a href="./index.php">Wyloguj się</a><br>
+    <a href="./user.php">Wróć do strony pacjenta!</a>
+    </div>
 </body>
 </html>

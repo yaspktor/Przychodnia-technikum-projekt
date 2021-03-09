@@ -46,7 +46,7 @@
             $query = "INSERT INTO users(`login`, `name`, `surname`, `email`, `password`) VALUES(\"$login\", \"$name\", \"$surname\", \"$email\", \"$password\");";
             $result = mysqli_query($connect, $query);
             mysqli_close($connect);
-            header("Location: http://localhost:8080/PyrzchodniaPAI/AAPrzychodnia/success.php");
+            header("Location: ./success.php");
         }
 
         if (isset($_POST['login']) && isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['email']) && isset($_POST['password'])) {
