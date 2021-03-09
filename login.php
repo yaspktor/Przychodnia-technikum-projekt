@@ -32,6 +32,7 @@
     <h2>Zadbaj o swoją przyszłość</h2>
     <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
     <p>Zbadaj się już teraz</p>
+   <a   href="./index.php"><img  id="hospital" src="hospital.png" alt="hospital"></a>
   </div>
   <form action="./login.php" method="POST" class="signupForm" name="signupform">
     <h2>Zaloguj się</h2>
