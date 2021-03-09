@@ -15,7 +15,7 @@
         $database = 'przychodnia';
         $connect = mysqli_connect($host, $user, $password, $database);
     ?>
-
+<!-- 
     <a href="./index.php">Strona startowa</a><br>
     <a href="./login.php">Logowanie</a>
    
@@ -28,7 +28,48 @@
         <label for="password">Podaj hasło: </label><input type="password" name="password" id="password" required><br>
         <input type="submit" value="Zatwierdź">
     </form>
+ -->
+ <div class="signinSection">
+  <div class="info">
+    <h2>Zadbaj o swoją przyszłość</h2>
+    <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
+    <p>Zbadaj się już teraz</p>
+   <a   href="./index.php"><img  id="hospital" src="hospital.png" alt="hospital"></a>
+   
+        <a  class="linki" href="./login.php">Logowanie</a><br><a  class="linki" href="./index.php">Strona startowa</a>
+    
+  </div>
+  <form action="./login.php" method="POST" class="signinForm" name="signinform">
+    
+    <ul class="noBullet">
+      <li>
+        <label for="username"></label>
+        <input type="text" class="inputFields" id="username" name="login" placeholder="Nazwa użytkownika" value="" required/>
+      </li>
+      <li>
+        <label for="name"></label>
+        <input type="text" class="inputFields" id="name" name="name" placeholder="Imię" value="" required/>
+      </li>
+      <li>
+        <label for="surname"></label>
+        <input  class="inputFields" placeholder="Nazwisko" type="text" name="surname" id="surname"  required/>
+      </li>
+      <li>
+        <label for="email"></label>
+        <input  class="inputFields" placeholder="Email" type="email" name="email" id="email" required/>
+      </li>
+      <li>
+        <label for="password"></label>
+        <input placeholder="Hasło" class="inputFields" type="password" name="password" id="password" required/>
+      </li>
+      
+      <li id="center-btn">
+        <input type="submit" id="but2" name="zarejestruj" alt="Zarejestruj" value="Zarejestruj">
+      </li>
 
+    </ul>
+  </form>
+</div>
     <?php #rejestracja konta
         function repeatableNicks($connect, $login) {
             $checkNick = "SELECT `login` FROM `users`;";

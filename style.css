@@ -23,7 +23,24 @@ body {
   filter: blur(0px);
 
 }
-.signupSection {
+.signupSection{
+  background: url(https://i.pinimg.com/originals/4f/90/14/4f90145427051551d62bbce831fe63b9.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  position: absolute;
+ 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 450px;
+  text-align: center;
+  display: flex;
+  color: white;
+  box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, 0.5);
+}
+.signinSection {
   background: url(https://i.pinimg.com/originals/4f/90/14/4f90145427051551d62bbce831fe63b9.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,6 +80,12 @@ body {
 .signupForm {
   width: 70%;
   padding: 30px 0;
+  background: rgba(20, 40, 40, 0.8);
+  transition: 0.2s;
+}
+.signinForm {
+  width: 70%;
+ margin: 0;
   background: rgba(20, 40, 40, 0.8);
   transition: 0.2s;
 }
@@ -114,6 +137,20 @@ body {
   transition: 0.4s;
 }
 #but1:hover {
+  background: rgba(20, 20, 20, 0.8);
+  padding: 10px 80px;
+}
+#but2 {
+  border: 1px solid #0ab4b4;
+  background: rgba(20, 20, 20, 0.6);
+  font-size: 18px;
+  color: white;
+  
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+#but2:hover {
   background: rgba(20, 20, 20, 0.8);
   padding: 10px 80px;
 }
