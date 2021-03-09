@@ -23,16 +23,16 @@
     <?php
         session_start();
         $login = $_SESSION['login'];
-        #echo "Witaj $login";
-        $query = 'SELECT users.name, users.surname, wizyty.data, doctors.imie, doctors.nazwisko FROM (users INNER JOIN wizyty ON users.id = wizyty.id_user) INNER JOIN doctors ON wizyty.id_doctor = doctors.id WHERE user.Login LIKE "'.$login.'";';
+        echo "Witaj $login";
+        $query = 'SELECT users.name, users.surname, wizyty.data, doctors.imie, doctors.nazwisko FROM (users INNER JOIN wizyty ON users.id = wizyty.id_user) INNER JOIN doctors ON wizyty.id_doctor = doctors.id WHERE users.Login LIKE "'.$login.'";';
         #SELECT users.name, users.surname, wizyty.data, doctors.imie, doctors.nazwisko FROM (users INNER JOIN wizyty ON users.id = wizyty.id_user) INNER JOIN doctors ON wizyty.id_doctor = doctors.id;
         $result = mysqli_query($connect, $query);
         if ($result){
-            echo "Twoja wizyta jest następująca: \n";
+            echo "Twoja wizyta jest następująca: <br>";
             while ($r = mysqli_fetch_assoc($result)) {
-                echo 'Dane osobowe: '.$r['users.name']. ' '. $r["users.surname"]. '\n';
-                echo 'Data: '. $r["wizyty.data"]. '\n';
-                echo 'Dane lekarza: '.$r["doctors.imie"]. ' '. $r["doctors.nazwisko"]. '\n';
+                echo 'Dane osobowe: '.$r['name']. ' '. $r["surname"]. '<br>';
+                echo 'Data: '. $r["data"]. '<br>';
+                echo 'Dane lekarza: '.$r["imie"]. ' '. $r["nazwisko"]. '<br>';
             }
         }
         else {
