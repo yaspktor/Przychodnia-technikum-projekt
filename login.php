@@ -38,7 +38,7 @@
     <ul class="noBullet">
       <li>
         <label for="username"></label>
-        <input type="text" class="inputFields" id="username" name="username" placeholder="Username" value="" required/>
+        <input type="text" class="inputFields" id="username" name="login" placeholder="Username" value="" required/>
       </li>
       <li>
         <label for="password"></label>
