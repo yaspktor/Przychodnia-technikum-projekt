@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 27 Lut 2021, 17:23
+-- Czas generowania: 09 Mar 2021, 15:20
 -- Wersja serwera: 10.4.17-MariaDB
 -- Wersja PHP: 7.3.27
 
@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `doctors` (
   `id` int(11) NOT NULL,
-  `imie` tinytext DEFAULT NULL,
-  `nazwisko` tinytext DEFAULT NULL
+  `name` tinytext DEFAULT NULL,
+  `surname` tinytext DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -40,7 +40,7 @@ CREATE TABLE `doctors` (
 --
 
 CREATE TABLE `users` (
-  `ID` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `Login` varchar(40) NOT NULL,
   `password` varchar(255) NOT NULL,
   `name` text NOT NULL,
@@ -48,15 +48,22 @@ CREATE TABLE `users` (
   `email` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Zrzut danych tabeli `users`
+--
+
+INSERT INTO `users` (`id`, `Login`, `password`, `name`, `surname`, `email`) VALUES
+(1, 'Bartman', 'BB123', 'Bartosz ', 'Bohdziewicz', 'bohdziewicz.bartosz@gmail.com');
+
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `wizyty`
+-- Struktura tabeli dla tabeli `visits`
 --
 
-CREATE TABLE `wizyty` (
+CREATE TABLE `visits` (
   `id_user` int(11) NOT NULL,
-  `data` datetime NOT NULL,
+  `data` time NOT NULL,
   `id_doctor` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -74,7 +81,7 @@ ALTER TABLE `doctors`
 -- Indeksy dla tabeli `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`ID`),
+  ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `Login` (`Login`);
 
 --
@@ -91,7 +98,7 @@ ALTER TABLE `doctors`
 -- AUTO_INCREMENT dla tabeli `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
