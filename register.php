@@ -39,7 +39,7 @@
         <a  class="linki" href="./login.php">Logowanie</a><br><a  class="linki" href="./index.php">Strona startowa</a>
     
   </div>
-  <form action="./login.php" method="POST" class="signinForm" name="signinform">
+  <form action="./register.php" method="POST" class="signinForm" name="signinform">
     
     <ul class="noBullet">
       <li>
