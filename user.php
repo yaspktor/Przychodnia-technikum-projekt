@@ -24,7 +24,7 @@
         session_start();
         $login = $_SESSION['login'];
         echo "Witaj $login";
-        $query = 'SELECT users.name, users.surname, wizyty.data, doctors.imie, doctors.nazwisko FROM (users INNER JOIN wizyty ON users.id = wizyty.id_user) INNER JOIN doctors ON wizyty.id_doctor = doctors.id WHERE users.Login LIKE "'.$login.'";';
+        $query = 'SELECT users.name, users.surname, visits.data, doctors.name, doctors.surname FROM (users INNER JOIN visits ON users.id = visits.id_user) INNER JOIN doctors ON visits.id_doctor = doctors.id WHERE users.login LIKE "'.$login.'";';
         #SELECT users.name, users.surname, wizyty.data, doctors.imie, doctors.nazwisko FROM (users INNER JOIN wizyty ON users.id = wizyty.id_user) INNER JOIN doctors ON wizyty.id_doctor = doctors.id;
         $result = mysqli_query($connect, $query);
         $len = mysqli_num_rows($result);
@@ -38,7 +38,7 @@
             }
         }
         else {
-            $query = 'SELECT wizyty.data FROM (users INNER JOIN wizyty ON users.id = wizyty.id_user) INNER JOIN doctors ON wizyty.id_doctor = doctors.id;';
+            $query = 'SELECT users.name, users.surname, visits.data, doctors.name, doctors.surname FROM (users INNER JOIN visits ON users.id = visits.id_user) INNER JOIN doctors ON visits.id_doctor = doctors.id;';
             $result = mysqli_query($connect, $query);
             echo "Nie jesteś zapisany na wizytę? Zrób to już teraz. Poniżej znajduje się formularz. Wypełnij go i zapisz się już dziś.<br><br>";
             echo '<form action="./user.php" method="POST">';
