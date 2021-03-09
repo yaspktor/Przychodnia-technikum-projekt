@@ -90,7 +90,7 @@
                     session_start();
                     $_SESSION['login'] = $login;
                     mysqli_close($connect);
-                    header("Location: http://localhost:8080/PyrzchodniaPAI/AAPrzychodnia/user.php");
+                    header("Location: ./user.php");
                 }
                 else echo "Podano niepoprawne dane.";
             }
