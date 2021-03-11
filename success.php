@@ -9,10 +9,9 @@
 </head>
 <body>
     <div id="container" style="text-align: center;" >
-    <h1>Konto zostało zarejestrowane!</h1>
-    <a href="./index.php">Powrót do strony startowej.</a><br>
-    <a href="./login.php" >Logowanie</a>
-    <div>
-    
+        <h1>Konto zostało zarejestrowane!</h1>
+        <a href="./index.php">Powrót do strony startowej.</a><br>
+        <a href="./login.php" >Logowanie</a>
+    </div>
 </body>
 </html>
