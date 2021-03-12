@@ -15,7 +15,7 @@
       $database = 'przychodnia';
       $connect = mysqli_connect($host, $user, $password, $database);
   ?>
-  <div class="signinSection">
+  <div class="signinSection">   
     <div class="info">
       <h2>Zadbaj o swoją przyszłość</h2>
       <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>

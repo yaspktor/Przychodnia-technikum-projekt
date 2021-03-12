@@ -72,10 +72,11 @@
             echo '<select name="time" id="time">';
             echo '<option disabled selected>--WYBIERZ--</option>';
             while ($r = mysqli_fetch_assoc($result)) {
+                echo '<script>alert("jest");</script>';
                 for($i=0; $i<=count($times)-1; $i++) {
                     if ($r["data"] == $times[$i]) array_splice($times, $i, 1);
-                    break;
                 }
+
             }
             for($i=0; $i<=count($times)-1; $i++) {
                 echo '<option value="'.$times[$i].'">'.substr($times[$i],0,5).'</option>';

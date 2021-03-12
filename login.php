@@ -16,35 +16,35 @@
       $connect = mysqli_connect($host, $user, $password, $database);
   ?>
   <div id="container">
-    <div id="form-css">
-      <div class="signupSection">
-        <div class="info">
-          <h2>Zadbaj o swoją przyszłość</h2>
-          <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
-          <p>Zbadaj się już teraz</p>
-          <a href="./index.php"><img  id="hospital" src="hospital.png" alt="hospital"></a>
-        </div>
-        <form action="./login.php" method="POST" class="signupForm" name="signupform">
-          <h2>Zaloguj się</h2>
-          <ul class="noBullet">
-            <li>
-              <label for="username"></label>
-              <input type="text" class="inputFields" id="username" name="login" placeholder="Username" value="" required/>
-            </li>
-            <li>
-              <label for="password"></label>
-              <input type="password" class="inputFields" id="password" name="password" placeholder="Password" value=""  required/>
-            </li>
-            <li id="center-btn">
-              <input type="submit" id="but1" name="zaloguj" alt="Zaloguj" value="Zaloguj">
-            </li>
-            <li id="links">
-              <a class="linki" href="./register.php">Rejestracja</a><br><a  class="linki" href="./index.php">Strona startowa</a>
-            </li>
-          </ul>
-        </form>
+      <div id="form-css">
+          <div class="signupSection">
+              <div class="info">
+                  <h2>Zadbaj o swoją przyszłość</h2>
+                  <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
+                  <p>Zbadaj się już teraz</p>
+                  <a href="./index.php"><img  id="hospital" src="./other/hospital.png" alt="hospital"></a>
+              </div>
+              <form action="./login.php" method="POST" class="signupForm" name="signupform">
+                  <h2>Zaloguj się</h2>
+                  <ul class="noBullet">
+                      <li>
+                          <label for="username"></label>
+                          <input type="text" class="inputFields" id="username" name="login" placeholder="Username" value="" required/>
+                      </li>
+                      <li>
+                          <label for="password"></label>
+                          <input type="password" class="inputFields" id="password" name="password" placeholder="Password" value=""  required/>
+                      </li>
+                      <li id="center-btn">
+                          <input type="submit" id="but1" name="zaloguj" alt="Zaloguj" value="Zaloguj">
+                      </li>
+                      <li id="links">
+                          <a class="linki" href="./register.php">Rejestracja</a><br><a  class="linki" href="./index.php">Strona startowa</a>
+                      </li>
+                  </ul>
+              </form>
+          </div>
       </div>
-    </div>
   </div>
   <?php
       function correctLogin($connect, $login) {
