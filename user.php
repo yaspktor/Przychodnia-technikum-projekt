@@ -17,8 +17,6 @@
     ?>
     <div id="container">
         <a href="./index.php">Wyloguj się</a><br>
-        <a href="./visits.php">Zobacz zaplanowane wizyty</a><br>
-        <a href="./apply.php">Zapisz się już dziś!</a><br>
     </div>
     <?php
 
