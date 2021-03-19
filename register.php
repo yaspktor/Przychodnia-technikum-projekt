@@ -51,6 +51,7 @@
       </ul>
     </form>
   </div>
+  <div id="errors">
   <?php #rejestracja konta
       function repeatableNicks($connect, $login) {
           $checkNick = "SELECT `login` FROM `users`;";
@@ -87,5 +88,8 @@
       }
       mysqli_close($connect);
   ?>
+
+  </div>
+ 
 </body>
 </html>
