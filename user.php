@@ -19,6 +19,8 @@
         $database = 'przychodnia';
         $connect = mysqli_connect($host, $user, $password, $database);
     ?>
+
+
     <?php
 
         function toTwo($value) {
