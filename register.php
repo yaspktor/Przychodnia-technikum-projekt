@@ -57,11 +57,9 @@
           $checkNick = "SELECT `login` FROM `users`;";
           $nicks = mysqli_query($connect, $checkNick);
           while ($r = mysqli_fetch_assoc($nicks)) {
-              #echo '<script>alert("'. $r["login"] .')</script>';
               if ($r["login"] == $login) return true;
               
           }
-          #echo "<script>alert(\"$login\")</script>";
           return false;
       }
 
@@ -90,6 +88,6 @@
   ?>
 
   </div>
- 
+
 </body>
 </html>

@@ -8,13 +8,7 @@
     <title>Przychodnia</title>
 </head>
 <body>
-    <!-- 
-    <div id="container" style="text-align: center;" >
-        <h1>Konto zostało zarejestrowane!</h1>
-        <a href="./index.php">Powrót do strony startowej.</a><br>
-        <a href="./login.php" >Logowanie</a>
-    </div>
-    -->
+
     <header class="header">
 
 	<div class="text-box">
@@ -22,7 +16,7 @@
 			<span class="heading-primary-main">Konto zostało zarejestrowane!</span>
 			
 		</h1>
-		<a href="./index.php" class="btn btn-white btn-animated">Powrót do strony startowej.</a>
+		<a href="./index.php" class="btn btn-white btn-animated">Strona startowa</a>
         <a href="./login.php" class="btn btn-white btn-animated">Logowanie</a>
 	</div>
 </header>

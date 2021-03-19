@@ -8,11 +8,7 @@
     <title>Przychodnia</title>
 </head>
 <body>
-    <!-- 
-    <h1>Witaj w E-przychodni</h1><br>
-    <a href="login.php">Zaloguj się!!! ŁUUUU</a><br>
-    <a href="register.php">Nie masz konta? Zarejestruj się już teraz!</a><br>
- -->
+    
     <header class="header">
 
 	<div class="text-box">
