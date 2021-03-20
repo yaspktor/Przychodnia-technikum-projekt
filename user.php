@@ -64,27 +64,36 @@
                     sleep(0.1);
                     $query = 'SELECT users.name, users.surname, visits.data, doctors.name, doctors.surname FROM (users INNER JOIN visits ON users.id = visits.id_user) INNER JOIN doctors ON visits.id_doctor = doctors.id;';
                     $result = mysqli_query($connect, $query);
-
                     echo 'Nie jesteś zapisany na wizytę? Zrób to już teraz.<br><br>';
-                    echo '<form action="./user.php" method="POST">';
-                    echo '<label for="time">Wybierz godzinę, która Cię interesuje i zatwierdź: </label><br>';
-                    echo '<select name="time" id="time">';
-                    echo '<option disabled selected>--WYBIERZ--</option>';
-                    while ($r = mysqli_fetch_assoc($result)) {
-                        for($i=0; $i<=count($times)-1; $i++) {
-                            if ($r["data"] == $times[$i]) array_splice($times, $i, 1);
-                        }
-                    }
 
-                    for($i=0; $i<=count($times)-1; $i++) {
-                        echo '<option value="'.$times[$i].'">'.substr($times[$i],0,5).'</option>';
-                    }
+                    echo '<form action="./user.php" method="POST">';
                         
-                    echo '</select>';
-                    echo '<input type="submit" value="Zatwierdź">';
+                        echo '<label for="doctor">Wybierz lekarza: </label><br>';
+                        
+                        echo '<select name="doctor" id="doctor" onchange="having(doctor.value)">';
+                            echo '<option disabled selected>--WYBIERZ--</option>';
+                            echo '<option value="1">Jan Jankowski</option>';
+                            echo '<option value="2">Bernardyn Brzechwa</option>';
+                        echo '</select><br>';
+
+                        echo '<label for="time">Wybierz godzinę: </label><br>';
+                        echo '<select name="time" id="time">';
+                        
+                            echo '<option id="defaultVal" disabled selected>--WYBIERZ--</option>';
+                            
+                            while ($r = mysqli_fetch_assoc($result)) {
+                                for($i=0; $i<=count($times)-1; $i++) {
+                                    if ($r["data"] == $times[$i]) array_splice($times, $i, 1);
+                                }
+                            }
+                            for($i=0; $i<=count($times)-1; $i++) {
+                                echo '<option class="'.substr($times[$i],0,2).'" value="'.$times[$i].'">'.substr($times[$i],0,5).'</option>';
+                            }
+                        echo '</select><br>';
+                        echo '<input type="submit" value="Zatwierdź">';
                     echo '</form>';
 
-                    if (isset($_POST['time'])) {
+                    if (isset($_POST['time']) && isset($_POST['doctor'])) {
                         $query = 'SELECT id FROM users WHERE `login` Like "'.$login.'";';
                         $result = mysqli_query($connect, $query);
                         $userID = mysqli_fetch_array($result)[0];
@@ -107,7 +116,47 @@
 </div>
 </header>
 
-   
+<script type="text/javascript">
+
+    function toTwo(value) {
+        if ((value.toString()).length==1) {
+            return '0'+value.toString();
+        }
+        return value.toString();
+    }
+
+    function having(doctorID) {
+        if (doctorID == "1") {
+            for (var i=8; i<14; i++) {
+                var x = document.getElementsByClassName(toTwo(i))
+                for (k = 0; k < x.length; k++) {
+                    x[k].disabled = false;
+                }
+            }
+            for (var i=14; i<=19; i++) {
+                var x = document.getElementsByClassName(toTwo(i))
+                for (k = 0; k < x.length; k++) {
+                    x[k].disabled = true;
+                }
+            }
+        }
+        else {
+            for (var i=8; i<14; i++) {
+                var x = document.getElementsByClassName(toTwo(i))
+                for (k = 0; k < x.length; k++) {
+                    x[k].disabled = true;
+                }
+            }
+            for (var i=14; i<=19; i++) {
+                var x = document.getElementsByClassName(toTwo(i))
+                for (k = 0; k < x.length; k++) {
+                    x[k].disabled = false;
+                }
+            }
+        }
+        document.getElementById("defaultVal").selected = true;
+    }
+</script>
     
 </body>
 </html>
