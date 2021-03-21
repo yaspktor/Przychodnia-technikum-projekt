@@ -9,9 +9,10 @@
 </head>
 <body>
 <header class="header">
+<div class="signinSection">   
 
-<div class="text-box">
-    <h1 class="heading-primary">
+    <div class="text-box">
+    
         <span class="heading-primary-main"> 
             <?php
 
@@ -70,14 +71,14 @@
                         
                         echo '<label for="doctor">Wybierz lekarza: </label><br>';
                         
-                        echo '<select name="doctor" id="doctor" onchange="having(doctor.value)">';
+                        echo '<select  class="custom-select" style="width:200px;" name="doctor" id="doctor"  onchange="having(doctor.value)">';
                             echo '<option disabled selected>--WYBIERZ--</option>';
                             echo '<option value="1">Jan Jankowski</option>';
                             echo '<option value="2">Bernardyn Brzechwa</option>';
                         echo '</select><br>';
 
                         echo '<label for="time">Wybierz godzinę: </label><br>';
-                        echo '<select name="time" id="time">';
+                        echo '<select name="time" id="time"  class="custom-select" style="width:200px;">';
                         
                             echo '<option id="defaultVal" disabled selected>--WYBIERZ--</option>';
                             
@@ -90,7 +91,7 @@
                                 echo '<option class="'.substr($times[$i],0,2).'" value="'.$times[$i].'">'.substr($times[$i],0,5).'</option>';
                             }
                         echo '</select><br>';
-                        echo '<input type="submit" value="Zatwierdź">';
+                        echo '<input type="submit" id="but1"  value="Zatwierdź">';
                     echo '</form>';
 
                     if (isset($_POST['time']) && isset($_POST['doctor'])) {
@@ -110,10 +111,12 @@
             ?>
         </span>
         
-    </h1>
+                <br>
     <a href="index.php" class="btn btn-white btn-animated">Wyloguj się</a>
     
 </div>
+  </div>
+
 </header>
 
 <script type="text/javascript">

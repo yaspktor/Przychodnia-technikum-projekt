@@ -27,15 +27,15 @@
       <ul class="noBullet">
         <li>
           <label for="username"></label>
-          <input type="text" class="inputFields" id="username" name="login" placeholder="Nazwa użytkownika" pattern="[A-ZĄŻŹŚĘĆŃÓŁ][a-zążźćęśńół]* *" required/>
+          <input type="text" class="inputFields" id="username" name="login" placeholder="Nazwa użytkownika" required/>
         </li>
         <li>
           <label for="name"></label>
-          <input type="text" class="inputFields" id="name" name="name" placeholder="Imię" pattern="[A-ZĄŻŹŚĘĆŃÓŁ][a-zążźćęśńół]+ *" required/>
+          <input type="text" class="inputFields" id="name" name="name" placeholder="Imię" required/>
         </li>
         <li>
           <label for="surname"></label>
-          <input  class="inputFields" placeholder="Nazwisko" type="text" name="surname" id="surname" pattern="[A-ZĄŻŹŚĘĆŃÓŁ][a-zążźćęśńół]* *" required/>
+          <input  class="inputFields" placeholder="Nazwisko" type="text" name="surname" id="surname"  required/>
         </li>
         <li>
           <label for="email"></label>
