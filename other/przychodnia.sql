@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 18 Mar 2021, 20:44
+-- Czas generowania: 21 Mar 2021, 16:51
 -- Wersja serwera: 10.4.8-MariaDB
 -- Wersja PHP: 7.3.11
 
@@ -57,15 +57,6 @@ CREATE TABLE `users` (
   `email` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Zrzut danych tabeli `users`
---
-
-INSERT INTO `users` (`id`, `Login`, `password`, `name`, `surname`, `email`) VALUES
-(1, 'Bartman', 'BB123', 'Bartosz ', 'Bohdziewicz', 'bohdziewicz.bartosz@gmail.com'),
-(4, 'Bartman2', 'BB123', 'Bartosz ', 'Bohdziewicz', 'bohdziewicz.bartosz@gmail.com'),
-(5, 'Bartman3', 'BB123', 'Bartosz ', 'Bohdziewicz', 'bohdziewicz.bartosz@gmail.com');
-
 -- --------------------------------------------------------
 
 --
@@ -77,14 +68,6 @@ CREATE TABLE `visits` (
   `data` time NOT NULL,
   `id_doctor` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Zrzut danych tabeli `visits`
---
-
-INSERT INTO `visits` (`id_user`, `data`, `id_doctor`) VALUES
-(1, '08:00:00', 1),
-(4, '15:20:00', 2);
 
 --
 -- Indeksy dla zrzutów tabel
@@ -117,7 +100,7 @@ ALTER TABLE `doctors`
 -- AUTO_INCREMENT dla tabeli `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

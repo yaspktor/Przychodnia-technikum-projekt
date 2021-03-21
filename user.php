@@ -57,7 +57,7 @@
                     echo "Twoja wizyta jest następująca: <br>";
                     while ($r = mysqli_fetch_array($result)) {
                         echo 'Dane osobowe: '.$r[0]. ' '. $r[1]. '<br>';
-                        echo 'Godzina: '. $r[2]. '<br>';
+                        echo 'Godzina: '.substr($r[2],0,5). '<br>';
                         echo 'Imię i nazwisko lekarza: '.$r[3]. ' '. $r[4]. '<br>';
                     }
                 }
